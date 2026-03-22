@@ -1,0 +1,168 @@
+/* variables de color para editar*/
+
+/* Variables de Diseño Creativo */
+:root {
+    --bg: #121212;           /* Fondo oscuro profundo */
+    --accent: #bcff00;       /* Amarillo Neón (Llamativo) */
+    --purple: #8a2be2;       /* Violeta Eléctrico */
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: 3px solid #bcff00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Si puedes, usa una fuente moderna */
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    padding: 15px;
+    overflow-x: hidden;
+}
+
+/* Contenedor con efecto de profundidad */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Sidebar Estilo "Floating Card" */
+.sidebar {
+    background: var(--purple);
+    padding: 30px;
+    border: var(--border);
+    box-shadow: 10px 10px 0px #000; /* Sombra sólida estilo Neo-Brutalismo */
+    border-radius: 0px; /* Bordes rectos para un look más agresivo */
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    filter: grayscale(100%) contrast(120%); /* Efecto artístico para tu foto */
+    transition: 0.5s;
+}
+
+.profile-img:hover {
+    filter: grayscale(0%);
+    transform: rotate(5deg) scale(1.1);
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 15px;
+    transform: skewX(-10deg); /* Inclinación creativa */
+}
+
+/* Secciones Principales */
+section {
+    background: var(--glass);
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    border-left: 8px solid var(--accent);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Etiquetas de Habilidades (Skills) */
+.habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades li {
+    background: white;
+    color: black;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    list-style: none;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%); /* Forma irregular */
+}
+
+/* Animación de entrada para la Experiencia */
+article {
+    border-bottom: 1px border var(--glass);
+    padding: 15px 0;
+}
+
+article h3 {
+    color: var(--accent);
+}
+
+/* Hover Global Creativo */
+section:hover {
+    background: rgba(188, 255, 0, 0.05);
+    transform: translateX(10px);
+}
+
+/* Estilo para Escritorio */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .sidebar {
+        flex: 1;
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+    }
+    .main-content {
+        flex: 2;
+    }
+
+.footer-final {
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: var(--accent); /* Amarillo Neón */
+    color: #000; /* Letras negras */
+    padding: 25px 10px;
+    text-align: center;
+    margin-top: 60px; /* Espacio para que no choque con el contenido */
+    border-top: 5px solid #000; /* Línea gruesa arriba */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    left: 0;
+}
+
+.footer-final p {
+    font-size: 0.9rem;
+}
+
+/* Efecto de decoración para que se vea más de "Diseñador" */
+.footer-final::before {
+    content: "DDISEÑADOR GRÁFICO • DESARROLLO WEB • ";
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+/* Animación sutil cuando pasas el dedo */
+.footer-final:hover {
+    background-color: white;
+    transition: 0.4s;
+}
+    }
